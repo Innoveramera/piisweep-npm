@@ -76,7 +76,7 @@ export class PiiSweep {
     const res = await fetch(`${this.baseUrl}${path}`, {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${this.apiKey}`,
+        "x-api-key": this.apiKey,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(body),

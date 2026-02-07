@@ -18,7 +18,7 @@ const pii = new PiiSweep("pg_live_...");
 // Strip PII from text
 const stripped = await pii.strip("Ring Johan Andersson på 070-123 45 67");
 console.log(stripped.stripped_text);
-// "Ring [NAME] på [PHONE]"
+// "Ring [NAMN] på [TELEFON]"
 
 // Detect PII without stripping
 const detected = await pii.detect("Personnummer: 199001011234");
