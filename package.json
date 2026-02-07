@@ -1,0 +1,45 @@
+{
+  "name": "piisweep",
+  "version": "0.1.0",
+  "description": "TypeScript client for the PiiSweep API — Swedish PII detection and stripping",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "pii",
+    "gdpr",
+    "swedish",
+    "personnummer",
+    "privacy",
+    "anonymization"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Innoveramera/piisweep"
+  },
+  "devDependencies": {
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.0"
+  }
+}
